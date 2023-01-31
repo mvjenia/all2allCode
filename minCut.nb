@@ -1,0 +1,1441 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 12.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     65084,       1433]
+NotebookOptionsPosition[     62849,       1388]
+NotebookOutlinePosition[     63184,       1403]
+CellTagsIndexPosition[     63141,       1400]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"edges", "=", " ", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"13", ",", "27"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"13", ",", "28"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"13", ",", "18"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"27", ",", "1"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"27", ",", "9"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"25", ",", "32"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"25", ",", "34"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"25", ",", "4"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"32", ",", "24"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"32", ",", "30"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"26", ",", "33"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"26", ",", "31"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"26", ",", "37"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"33", ",", "6"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"33", ",", "19"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"15", ",", "36"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"15", ",", "20"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"15", ",", "16"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"36", ",", "10"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"36", ",", "21"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"6", ",", "5"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"6", ",", "2"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"23", ",", "31"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"23", ",", "12"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"23", ",", "29"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"31", ",", "8"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"20", ",", "38"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"20", ",", "17"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"38", ",", "9"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"38", ",", "37"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"22", ",", "29"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"22", ",", "34"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"22", ",", "30"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"29", ",", "3"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"3", ",", "37"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"3", ",", "8"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"2", ",", "11"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"2", ",", "14"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"11", ",", "18"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"11", ",", "21"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"14", ",", "4"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"14", ",", "12"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"19", ",", "9"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"19", ",", "1"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"0", ",", "35"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"0", ",", "28"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"0", ",", "12"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"35", ",", "17"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"35", ",", "30"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"17", ",", "39"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"39", ",", "10"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"39", ",", "34"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"10", ",", "28"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"7", ",", "16"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"7", ",", "21"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"7", ",", "24"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"16", ",", "18"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"1", ",", "8"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"24", ",", "5"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"4", ",", "5"}], "}"}]}], "}"}]}], ";"}]], "Input",
+ CellChangeTimes->{{3.8728798922887983`*^9, 3.872879904871407*^9}},
+ CellLabel->"In[1]:=",ExpressionUUID->"d2c7f639-5e58-4ca7-89df-383037e50a2e"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"g", " ", "=", 
+   RowBox[{"Graph", "[", 
+    RowBox[{"Table", "[", 
+     RowBox[{
+      RowBox[{"UndirectedEdge", "[", 
+       RowBox[{
+        RowBox[{"edges", "[", 
+         RowBox[{"[", 
+          RowBox[{"i", ",", "1"}], "]"}], "]"}], ",", 
+        RowBox[{"edges", "[", 
+         RowBox[{"[", 
+          RowBox[{"i", ",", "2"}], "]"}], "]"}]}], "]"}], ",", 
+      RowBox[{"{", 
+       RowBox[{"i", ",", "1", ",", 
+        RowBox[{
+         RowBox[{"Dimensions", "[", "edges", "]"}], "[", 
+         RowBox[{"[", "1", "]"}], "]"}]}], "}"}]}], "]"}], "]"}]}], 
+  ";"}]], "Input",
+ CellChangeTimes->{{3.872880143673047*^9, 3.8728802359010983`*^9}},
+ CellLabel->"In[6]:=",ExpressionUUID->"928d4468-9c75-417a-a889-0a8b36d36f14"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"FindMinimumCut", "[", "g", "]"}]], "Input",
+ CellChangeTimes->{{3.872880238768471*^9, 3.872880247600203*^9}},
+ CellLabel->"In[7]:=",ExpressionUUID->"963dba50-4942-4a02-a6e2-db37948e0859"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{"3", ",", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", "7", "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{
+      "13", ",", "27", ",", "28", ",", "18", ",", "1", ",", "9", ",", "25", 
+       ",", "32", ",", "34", ",", "4", ",", "24", ",", "30", ",", "26", ",", 
+       "33", ",", "31", ",", "37", ",", "6", ",", "19", ",", "15", ",", "36", 
+       ",", "20", ",", "16", ",", "10", ",", "21", ",", "5", ",", "2", ",", 
+       "23", ",", "12", ",", "29", ",", "8", ",", "38", ",", "17", ",", "22", 
+       ",", "3", ",", "11", ",", "14", ",", "0", ",", "35", ",", "39"}], 
+      "}"}]}], "}"}]}], "}"}]], "Output",
+ CellChangeTimes->{3.872880248148541*^9},
+ CellLabel->"Out[7]=",ExpressionUUID->"eabf6bac-b857-4f5e-b7fb-ff087c45927e"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"FindGraphPartition", "[", "g", "]"}]], "Input",
+ CellChangeTimes->{{3.872880325614039*^9, 3.872880335088785*^9}},
+ CellLabel->"In[8]:=",ExpressionUUID->"113aa7b5-3a83-42b5-9405-173d4df5561f"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{
+    "13", ",", "28", ",", "18", ",", "25", ",", "32", ",", "34", ",", "24", 
+     ",", "30", ",", "15", ",", "36", ",", "20", ",", "16", ",", "10", ",", 
+     "21", ",", "17", ",", "22", ",", "11", ",", "35", ",", "39", ",", "7"}], 
+    "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+    "27", ",", "1", ",", "9", ",", "4", ",", "26", ",", "33", ",", "31", ",", 
+     "37", ",", "6", ",", "19", ",", "5", ",", "2", ",", "23", ",", "12", ",",
+      "29", ",", "8", ",", "38", ",", "3", ",", "14", ",", "0"}], "}"}]}], 
+  "}"}]], "Output",
+ CellChangeTimes->{3.8728803356115303`*^9},
+ CellLabel->"Out[8]=",ExpressionUUID->"775ceeed-704a-4017-8f23-c0315f3828c0"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"\n", 
+  RowBox[{"HighlightGraph", "[", 
+   RowBox[{"g", ",", 
+    RowBox[{"Map", "[", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"Subgraph", "[", 
+        RowBox[{"g", ",", "#"}], "]"}], "&"}], ",", "%"}], "]"}]}], 
+   "]"}]}]], "Input",
+ CellChangeTimes->{{3.872880361027639*^9, 3.872880364884124*^9}},
+ CellLabel->"In[9]:=",ExpressionUUID->"ec45dd22-ac55-4938-b9e1-e117fb336993"],
+
+Cell[BoxData[
+ GraphicsBox[
+  NamespaceBox["NetworkGraphics",
+   DynamicModuleBox[{Typeset`graph = HoldComplete[
+     Graph[{13, 27, 28, 18, 1, 9, 25, 32, 34, 4, 24, 30, 26, 33, 31, 37, 6, 
+      19, 15, 36, 20, 16, 10, 21, 5, 2, 23, 12, 29, 8, 38, 17, 22, 3, 11, 14, 
+      0, 35, 39, 7}, {
+      Null, {{1, 2}, {1, 3}, {1, 4}, {2, 5}, {2, 6}, {7, 8}, {7, 9}, {7, 
+       10}, {8, 11}, {8, 12}, {13, 14}, {13, 15}, {13, 16}, {14, 17}, {14, 
+       18}, {19, 20}, {19, 21}, {19, 22}, {20, 23}, {20, 24}, {17, 25}, {17, 
+       26}, {27, 15}, {27, 28}, {27, 29}, {15, 30}, {21, 31}, {21, 32}, {31, 
+       6}, {31, 16}, {33, 29}, {33, 9}, {33, 12}, {29, 34}, {34, 16}, {34, 
+       30}, {26, 35}, {26, 36}, {35, 4}, {35, 24}, {36, 10}, {36, 28}, {18, 
+       6}, {18, 5}, {37, 38}, {37, 3}, {37, 28}, {38, 32}, {38, 12}, {32, 
+       39}, {39, 23}, {39, 9}, {23, 3}, {40, 22}, {40, 24}, {40, 11}, {22, 
+       4}, {5, 30}, {11, 25}, {10, 25}}}, {GraphHighlight -> {3, 
+         UndirectedEdge[15, 20], 
+         UndirectedEdge[25, 32], 32, 
+         UndirectedEdge[23, 31], 21, 
+         UndirectedEdge[3, 8], 35, 10, 
+         UndirectedEdge[39, 34], 
+         UndirectedEdge[35, 17], 15, 
+         UndirectedEdge[7, 16], 
+         UndirectedEdge[23, 29], 
+         UndirectedEdge[7, 24], 
+         UndirectedEdge[10, 28], 
+         UndirectedEdge[26, 37], 
+         UndirectedEdge[19, 1], 
+         UndirectedEdge[23, 12], 
+         UndirectedEdge[2, 14], 
+         UndirectedEdge[32, 24], 
+         UndirectedEdge[0, 12], 
+         UndirectedEdge[13, 28], 
+         UndirectedEdge[36, 21], 
+         UndirectedEdge[26, 33], 20, 
+         UndirectedEdge[11, 21], 17, 2, 0, 
+         UndirectedEdge[16, 18], 12, 
+         UndirectedEdge[35, 30], 4, 
+         UndirectedEdge[31, 8], 
+         UndirectedEdge[33, 6], 29, 18, 33, 
+         UndirectedEdge[26, 31], 13, 
+         UndirectedEdge[15, 16], 27, 22, 26, 8, 
+         UndirectedEdge[15, 36], 31, 
+         UndirectedEdge[7, 21], 
+         UndirectedEdge[27, 1], 
+         UndirectedEdge[22, 34], 6, 14, 7, 38, 30, 5, 
+         UndirectedEdge[19, 9], 
+         UndirectedEdge[39, 10], 
+         UndirectedEdge[20, 17], 
+         UndirectedEdge[11, 18], 37, 11, 25, 
+         UndirectedEdge[22, 30], 
+         UndirectedEdge[13, 18], 1, 
+         UndirectedEdge[1, 8], 
+         UndirectedEdge[25, 34], 
+         UndirectedEdge[6, 5], 
+         UndirectedEdge[36, 10], 
+         UndirectedEdge[14, 4], 28, 
+         UndirectedEdge[38, 9], 23, 39, 
+         UndirectedEdge[38, 37], 
+         UndirectedEdge[27, 9], 
+         UndirectedEdge[14, 12], 34, 
+         UndirectedEdge[4, 5], 24, 
+         UndirectedEdge[6, 2], 
+         UndirectedEdge[32, 30], 9, 36, 
+         UndirectedEdge[29, 3], 19, 
+         UndirectedEdge[17, 39], 16, 
+         UndirectedEdge[3, 37], 
+         UndirectedEdge[33, 19]}, 
+       GraphHighlightStyle -> {
+        15 -> {VertexStyle -> Hue[0, 1, 0.8]}, 
+         UndirectedEdge[29, 3] -> {EdgeStyle -> Hue[0.14, 1, 0.9]}, 
+         UndirectedEdge[23, 12] -> {EdgeStyle -> Hue[0.14, 1, 0.9]}, 
+         UndirectedEdge[33, 6] -> {EdgeStyle -> Hue[0.14, 1, 0.9]}, 
+         UndirectedEdge[23, 31] -> {EdgeStyle -> Hue[0.14, 1, 0.9]}, 
+         UndirectedEdge[7, 16] -> {EdgeStyle -> Hue[0, 1, 0.8]}, 
+         39 -> {VertexStyle -> Hue[0, 1, 0.8]}, 
+         UndirectedEdge[4, 5] -> {EdgeStyle -> Hue[0.14, 1, 0.9]}, 
+         UndirectedEdge[38, 9] -> {EdgeStyle -> Hue[0.14, 1, 0.9]}, 
+         UndirectedEdge[35, 30] -> {EdgeStyle -> Hue[0, 1, 0.8]}, 
+         UndirectedEdge[7, 24] -> {EdgeStyle -> Hue[0, 1, 0.8]}, 
+         2 -> {VertexStyle -> Hue[0.14, 1, 0.9]}, 
+         8 -> {VertexStyle -> Hue[0.14, 1, 0.9]}, 
+         UndirectedEdge[31, 8] -> {EdgeStyle -> Hue[0.14, 1, 0.9]}, 
+         UndirectedEdge[20, 17] -> {EdgeStyle -> Hue[0, 1, 0.8]}, 
+         UndirectedEdge[32, 30] -> {EdgeStyle -> Hue[0, 1, 0.8]}, 
+         23 -> {VertexStyle -> Hue[0.14, 1, 0.9]}, 
+         35 -> {VertexStyle -> Hue[0, 1, 0.8]}, 
+         19 -> {VertexStyle -> Hue[0.14, 1, 0.9]}, 
+         UndirectedEdge[13, 28] -> {EdgeStyle -> Hue[0, 1, 0.8]}, 
+         17 -> {VertexStyle -> Hue[0, 1, 0.8]}, 
+         UndirectedEdge[15, 36] -> {EdgeStyle -> Hue[0, 1, 0.8]}, 
+         UndirectedEdge[14, 4] -> {EdgeStyle -> Hue[0.14, 1, 0.9]}, 
+         UndirectedEdge[15, 20] -> {EdgeStyle -> Hue[0, 1, 0.8]}, 
+         UndirectedEdge[27, 1] -> {EdgeStyle -> Hue[0.14, 1, 0.9]}, 
+         11 -> {VertexStyle -> Hue[0, 1, 0.8]}, 
+         UndirectedEdge[2, 14] -> {EdgeStyle -> Hue[0.14, 1, 0.9]}, 
+         16 -> {VertexStyle -> Hue[0, 1, 0.8]}, 
+         UndirectedEdge[11, 21] -> {EdgeStyle -> Hue[0, 1, 0.8]}, 
+         UndirectedEdge[19, 1] -> {EdgeStyle -> Hue[0.14, 1, 0.9]}, 
+         UndirectedEdge[39, 10] -> {EdgeStyle -> Hue[0, 1, 0.8]}, 
+         32 -> {VertexStyle -> Hue[0, 1, 0.8]}, 
+         UndirectedEdge[26, 33] -> {EdgeStyle -> Hue[0.14, 1, 0.9]}, 
+         29 -> {VertexStyle -> Hue[0.14, 1, 0.9]}, 
+         7 -> {VertexStyle -> Hue[0, 1, 0.8]}, 
+         UndirectedEdge[22, 34] -> {EdgeStyle -> Hue[0, 1, 0.8]}, 
+         20 -> {VertexStyle -> Hue[0, 1, 0.8]}, 
+         26 -> {VertexStyle -> Hue[0.14, 1, 0.9]}, 
+         38 -> {VertexStyle -> Hue[0.14, 1, 0.9]}, 
+         9 -> {VertexStyle -> Hue[0.14, 1, 0.9]}, 
+         31 -> {VertexStyle -> Hue[0.14, 1, 0.9]}, 
+         33 -> {VertexStyle -> Hue[0.14, 1, 0.9]}, 
+         UndirectedEdge[32, 24] -> {EdgeStyle -> Hue[0, 1, 0.8]}, 
+         UndirectedEdge[22, 30] -> {EdgeStyle -> Hue[0, 1, 0.8]}, 
+         UndirectedEdge[6, 5] -> {EdgeStyle -> Hue[0.14, 1, 0.9]}, 
+         UndirectedEdge[26, 37] -> {EdgeStyle -> Hue[0.14, 1, 0.9]}, 
+         UndirectedEdge[36, 10] -> {EdgeStyle -> Hue[0, 1, 0.8]}, 
+         UndirectedEdge[19, 9] -> {EdgeStyle -> Hue[0.14, 1, 0.9]}, 
+         UndirectedEdge[16, 18] -> {EdgeStyle -> Hue[0, 1, 0.8]}, 
+         18 -> {VertexStyle -> Hue[0, 1, 0.8]}, 
+         UndirectedEdge[26, 31] -> {EdgeStyle -> Hue[0.14, 1, 0.9]}, 
+         UndirectedEdge[1, 8] -> {EdgeStyle -> Hue[0.14, 1, 0.9]}, 
+         13 -> {VertexStyle -> Hue[0, 1, 0.8]}, 
+         34 -> {VertexStyle -> Hue[0, 1, 0.8]}, 
+         UndirectedEdge[23, 29] -> {EdgeStyle -> Hue[0.14, 1, 0.9]}, 
+         UndirectedEdge[25, 34] -> {EdgeStyle -> Hue[0, 1, 0.8]}, 
+         UndirectedEdge[36, 21] -> {EdgeStyle -> Hue[0, 1, 0.8]}, 
+         3 -> {VertexStyle -> Hue[0.14, 1, 0.9]}, 
+         12 -> {VertexStyle -> Hue[0.14, 1, 0.9]}, 
+         28 -> {VertexStyle -> Hue[0, 1, 0.8]}, 
+         36 -> {VertexStyle -> Hue[0, 1, 0.8]}, 
+         4 -> {VertexStyle -> Hue[0.14, 1, 0.9]}, 
+         0 -> {VertexStyle -> Hue[0.14, 1, 0.9]}, 
+         25 -> {VertexStyle -> Hue[0, 1, 0.8]}, 
+         UndirectedEdge[39, 34] -> {EdgeStyle -> Hue[0, 1, 0.8]}, 
+         UndirectedEdge[25, 32] -> {EdgeStyle -> Hue[0, 1, 0.8]}, 
+         1 -> {VertexStyle -> Hue[0.14, 1, 0.9]}, 
+         UndirectedEdge[11, 18] -> {EdgeStyle -> Hue[0, 1, 0.8]}, 
+         UndirectedEdge[13, 18] -> {EdgeStyle -> Hue[0, 1, 0.8]}, 
+         UndirectedEdge[7, 21] -> {EdgeStyle -> Hue[0, 1, 0.8]}, 
+         24 -> {VertexStyle -> Hue[0, 1, 0.8]}, 
+         UndirectedEdge[3, 37] -> {EdgeStyle -> Hue[0.14, 1, 0.9]}, 
+         UndirectedEdge[6, 2] -> {EdgeStyle -> Hue[0.14, 1, 0.9]}, 
+         UndirectedEdge[38, 37] -> {EdgeStyle -> Hue[0.14, 1, 0.9]}, 
+         21 -> {VertexStyle -> Hue[0, 1, 0.8]}, 
+         37 -> {VertexStyle -> Hue[0.14, 1, 0.9]}, 
+         UndirectedEdge[14, 12] -> {EdgeStyle -> Hue[0.14, 1, 0.9]}, 
+         10 -> {VertexStyle -> Hue[0, 1, 0.8]}, 
+         22 -> {VertexStyle -> Hue[0, 1, 0.8]}, 
+         UndirectedEdge[0, 12] -> {EdgeStyle -> Hue[0.14, 1, 0.9]}, 
+         UndirectedEdge[35, 17] -> {EdgeStyle -> Hue[0, 1, 0.8]}, 
+         UndirectedEdge[3, 8] -> {EdgeStyle -> Hue[0.14, 1, 0.9]}, 
+         30 -> {VertexStyle -> Hue[0, 1, 0.8]}, 
+         27 -> {VertexStyle -> Hue[0.14, 1, 0.9]}, 
+         UndirectedEdge[27, 9] -> {EdgeStyle -> Hue[0.14, 1, 0.9]}, 
+         UndirectedEdge[17, 39] -> {EdgeStyle -> Hue[0, 1, 0.8]}, 
+         UndirectedEdge[33, 19] -> {EdgeStyle -> Hue[0.14, 1, 0.9]}, 
+         5 -> {VertexStyle -> Hue[0.14, 1, 0.9]}, 
+         UndirectedEdge[10, 28] -> {EdgeStyle -> Hue[0, 1, 0.8]}, 
+         UndirectedEdge[15, 16] -> {EdgeStyle -> Hue[0, 1, 0.8]}, 
+         14 -> {VertexStyle -> Hue[0.14, 1, 0.9]}, 
+         6 -> {VertexStyle -> Hue[0.14, 1, 0.9]}}}]]}, 
+    TagBox[GraphicsGroupBox[GraphicsComplexBox[CompressedData["
+1:eJwBkQJu/SFib1JlAgAAACgAAAACAAAAsnxkIbrkBkAaYjpcXCXgPwfKXqGv
+Qfg/LC2nVGRI2j+7w3cR93wLQMR5fc35RPo/Dn97OebgDkAAAAAAAAAAAEjC
+i3jSH9k/ADKy7nok6z9fSsTiIyvwP07qCrEA/OY/DB2+N1V/EEAy9S8w5qIL
+QH/MXaMZdhJAzN5Z3uheCUAKRY0G5wEOQMZcbNleZxBASuOoTUsKDkC54wl6
+ZPgCQNJeVovKfRNAP+2HQXZi/z8JBlRDY0wNQEU6h4+e3w5AeBID64Lo4D/M
+okqLwH34P0s9QPzqwvQ/PoylDlWN6D+QFJJ+DHLRP5W4gHZvzQJAKKVN3CoV
+6j/8datkSk8AQCMjQL90AgVALEVkarYn6j/Ym4WlL+vhP6jsw/3O+tU/GF67
+BFvYEED2bsE+21fyP0RMXWgGxBNAMjo4hgDq8z8C6a7Tj6wIQCbO7BERhv0/
+CXDtF525EkDgklivaYjcP2HQOtK9rBFAbwzOSpz2AECQ6AJuydAUQPzSxWcE
+0ds/0/fKFzlyDkBcvN04CfD3P0jQmUe0OwtAaoFYu/Am5D+8spinIM/xP3Jj
+cU1/fgdATtu11En/AEAsojU5qC4EQBcm+mHnt/Y/FvWYxeLiDEAAAAAAAAAA
+AG32QI8TcP4/dokMVWYo+z+Ydoh8/pf4P/rBpZ7FOgxAA1Nms4HaBkCn1ytO
+yZ4FQH8mQ/zEeRBAoLr63BKg4D/CTZfKL3gGQBknNYx8YxFAwKeX2qBWrD9F
++V7xiFUHQDOPvPdbW/s/LZkTwhgwB0Db7HVg8eoEQJkMEb+q0AlAX5D8YHRR
+C0BWHBJS+OoQQKKvAJDBmglA9mMqV7VWFUBUbOhVb7rvPwU3IFE=
+       "], {
+        {Hue[0.6, 0.7, 0.5], Opacity[0.7], 
+         LineBox[{{2.861683140639422, 0.5045606423692022}, {1.516036634781473,
+           0.4106684519471908}}], 
+         {Hue[0, 1, 0.8], 
+          LineBox[{{2.861683140639422, 0.5045606423692022}, {
+           3.4360181202577826`, 1.6418397929152073`}}]}, 
+         {Hue[0, 1, 0.8], 
+          LineBox[{{2.861683140639422, 0.5045606423692022}, {
+           3.8598141184628565`, 0.}}]}, 
+         {Hue[0.14, 1, 0.9], 
+          LineBox[{{1.516036634781473, 0.4106684519471908}, {
+           0.39256727001251024`, 0.8482031499893878}}]}, 
+         {Hue[0.14, 1, 0.9], 
+          LineBox[{{1.516036634781473, 0.4106684519471908}, {
+           1.0105322702480846`, 0.7182620485176103}}]}, 
+         {Hue[0, 1, 0.8], 
+          LineBox[{{3.4360181202577826`, 1.6418397929152073`}, {
+           4.418692860450478, 2.1204152912264855`}}]}, 
+         LineBox[{{3.4360181202577826`, 1.6418397929152073`}, {
+          2.89848472235021, 2.6147182022083206`}}], 
+         {Hue[0, 1, 0.8], 
+          LineBox[{{3.8598141184628565`, 0.}, {4.6812633265181, 
+           0.4458259785044856}}]}, 
+         {Hue[0, 1, 0.8], 
+          LineBox[{{3.8598141184628565`, 0.}, {4.3471547992174004`, 
+           0.05534842174877452}}]}, 
+         {Hue[0.14, 1, 0.9], 
+          LineBox[{{0.39256727001251024`, 0.8482031499893878}, {
+           0.5599592430925169, 0.34343313962717525`}}]}, 
+         {Hue[0.14, 1, 0.9], 
+          LineBox[{{0.39256727001251024`, 0.8482031499893878}, {0., 
+           1.9023624034738547`}}]}, 
+         {Hue[0.14, 1, 0.9], 
+          LineBox[{{1.0105322702480846`, 0.7182620485176103}, {
+           0.5599592430925169, 0.34343313962717525`}}]}, 
+         {Hue[0.14, 1, 0.9], 
+          LineBox[{{1.0105322702480846`, 0.7182620485176103}, {
+           1.6973632166123855`, 1.537107931573166}}]}, 
+         {Hue[0, 1, 0.8], 
+          LineBox[{{4.124348517397504, 3.454540611709171}, {4.615332176780725,
+            3.171342599027275}}]}, 
+         {Hue[0, 1, 0.8], 
+          LineBox[{{4.124348517397504, 3.454540611709171}, {3.750928927599152,
+            4.100947758902469}}]}, 
+         LineBox[{{4.124348517397504, 3.454540611709171}, {3.75502644225745, 
+          2.3712853941219376`}}], 
+         {Hue[0, 1, 0.8], 
+          LineBox[{{4.615332176780725, 3.171342599027275}, {4.872842957636481,
+            1.9615385589411998`}}]}, 
+         {Hue[0, 1, 0.8], 
+          LineBox[{{4.615332176780725, 3.171342599027275}, {
+           3.6622987041489563`, 3.8591891492026513`}}]}, 
+         {Hue[0, 1, 0.8], 
+          LineBox[{{3.750928927599152, 4.100947758902469}, {
+           2.7025323969964634`, 4.11891550216535}}]}, 
+         {Hue[0, 1, 0.8], 
+          LineBox[{{3.750928927599152, 4.100947758902469}, {4.229462892871274,
+            3.200564503689706}}]}, 
+         {Hue[0.14, 1, 0.9], 
+          LineBox[{{3.75502644225745, 2.3712853941219376`}, {
+           3.805772958642572, 1.4961025449117846`}}]}, 
+         {Hue[0.14, 1, 0.9], 
+          LineBox[{{3.75502644225745, 2.3712853941219376`}, {
+           2.916765104018085, 1.7098045041283967`}}]}, 
+         LineBox[{{4.872842957636481, 1.9615385589411998`}, {
+          3.805772958642572, 1.4961025449117846`}}], 
+         {Hue[0, 1, 0.8], 
+          LineBox[{{4.872842957636481, 1.9615385589411998`}, {
+           5.334676134073552, 0.9915081670654993}}]}, 
+         {Hue[0, 1, 0.8], 
+          LineBox[{{3.6622987041489563`, 3.8591891492026513`}, {
+           2.7025323969964634`, 4.11891550216535}}]}, 
+         {Hue[0, 1, 0.8], 
+          LineBox[{{3.6622987041489563`, 3.8591891492026513`}, {
+           3.2268881728246694`, 3.414772756297722}}]}, 
+         {Hue[0.14, 1, 0.9], 
+          LineBox[{{0.5283827390745293, 1.5307012024951971`}, {
+           1.297587380748001, 0.7672524725024983}}]}, 
+         {Hue[0.14, 1, 0.9], 
+          LineBox[{{0.5283827390745293, 1.5307012024951971`}, {
+           0.27258598671353074`, 2.3503102548630275`}}]}, 
+         {Hue[0.14, 1, 0.9], 
+          LineBox[{{0.5283827390745293, 1.5307012024951971`}, {
+           0.8150839140700201, 2.038716112597056}}]}, 
+         {Hue[0.14, 1, 0.9], 
+          LineBox[{{1.297587380748001, 0.7672524725024983}, {2.62619923986894,
+            0.8173477247202405}}]}, 
+         {Hue[0.14, 1, 0.9], 
+          LineBox[{{1.297587380748001, 0.7672524725024983}, {
+           0.5599592430925169, 0.34343313962717525`}}]}, 
+         {Hue[0.14, 1, 0.9], 
+          LineBox[{{0.27258598671353074`, 2.3503102548630275`}, {
+           1.1130682512986558`, 2.9367662477711116`}}]}, 
+         {Hue[0.14, 1, 0.9], 
+          LineBox[{{0.27258598671353074`, 2.3503102548630275`}, {0., 
+           1.9023624034738547`}}]}, 
+         {Hue[0.14, 1, 0.9], 
+          LineBox[{{0.8150839140700201, 2.038716112597056}, {
+           1.6973632166123855`, 1.537107931573166}}]}, 
+         {Hue[0.14, 1, 0.9], 
+          LineBox[{{0.8150839140700201, 2.038716112597056}, {
+           0.5195402446750741, 2.808684904806541}}]}, 
+         {Hue[0.14, 1, 0.9], 
+          LineBox[{{2.62619923986894, 0.8173477247202405}, {3.805772958642572,
+            1.4961025449117846`}}]}, 
+         {Hue[0.14, 1, 0.9], 
+          LineBox[{{2.62619923986894, 0.8173477247202405}, {
+           3.4041524499716935`, 0.6297534617515741}}]}, 
+         {Hue[0, 1, 0.8], 
+          LineBox[{{4.211284707962044, 1.1464493228331185`}, {
+           4.941430693335011, 1.2446294062571153`}}]}, 
+         {Hue[0, 1, 0.8], 
+          LineBox[{{4.211284707962044, 1.1464493228331185`}, {
+           3.0842587030175546`, 1.8452311229892842`}}]}, 
+         {Hue[0, 1, 0.8], 
+          LineBox[{{4.211284707962044, 1.1464493228331185`}, {4.6812633265181,
+            0.4458259785044856}}]}, 
+         {Hue[0, 1, 0.8], 
+          LineBox[{{4.941430693335011, 1.2446294062571153`}, {
+           4.418692860450478, 2.1204152912264855`}}]}, 
+         {Hue[0, 1, 0.8], 
+          LineBox[{{4.941430693335011, 1.2446294062571153`}, {
+           5.203893393447416, 0.4346323979764717}}]}, 
+         LineBox[{{3.0842587030175546`, 1.8452311229892842`}, {
+          1.6973632166123855`, 1.537107931573166}}], 
+         {Hue[0, 1, 0.8], 
+          LineBox[{{3.0842587030175546`, 1.8452311229892842`}, {
+           3.528697242196583, 2.8566926971055877`}}]}, 
+         {Hue[0, 1, 0.8], 
+          LineBox[{{4.6812633265181, 0.4458259785044856}, {5.334676134073552, 
+           0.9915081670654993}}]}, 
+         {Hue[0, 1, 0.8], 
+          LineBox[{{4.418692860450478, 2.1204152912264855`}, {
+           4.229462892871274, 3.200564503689706}}]}, 
+         {Hue[0, 1, 0.8], 
+          LineBox[{{5.203893393447416, 0.4346323979764717}, {
+           4.3471547992174004`, 0.05534842174877452}}]}, 
+         {Hue[0, 1, 0.8], 
+          LineBox[{{5.203893393447416, 0.4346323979764717}, {
+           5.334676134073552, 0.9915081670654993}}]}, 
+         LineBox[{{3.4041524499716935`, 0.6297534617515741}, {
+          4.3471547992174004`, 0.05534842174877452}}], 
+         {Hue[0.14, 1, 0.9], 
+          LineBox[{{3.4041524499716935`, 0.6297534617515741}, {
+           2.916765104018085, 1.7098045041283967`}}]}, 
+         {Hue[0.14, 1, 0.9], 
+          LineBox[{{1.1130682512986558`, 2.9367662477711116`}, {
+           2.1246525400160072`, 2.5227817983143463`}}]}, 
+         {Hue[0.14, 1, 0.9], 
+          LineBox[{{1.1130682512986558`, 2.9367662477711116`}, {
+           1.4198983981353928`, 3.6107840955070385`}}]}, 
+         {Hue[0.14, 1, 0.9], 
+          LineBox[{{2.1246525400160072`, 2.5227817983143463`}, {
+           2.916765104018085, 1.7098045041283967`}}]}, 
+         {Hue[0.14, 1, 0.9], 
+          LineBox[{{2.1246525400160072`, 2.5227817983143463`}, {
+           2.89848472235021, 2.6147182022083206`}}]}, 
+         LineBox[{{1.4198983981353928`, 3.6107840955070385`}, {
+          2.7025323969964634`, 4.11891550216535}}], 
+         {Hue[0.14, 1, 0.9], 
+          LineBox[{{1.4198983981353928`, 3.6107840955070385`}, {
+           0.5195402446750741, 2.808684904806541}}]}, 
+         {Hue[0.14, 1, 0.9], 
+          LineBox[{{0., 1.9023624034738547`}, {0.5195402446750741, 
+           2.808684904806541}}]}, 
+         {Hue[0, 1, 0.8], 
+          LineBox[{{3.528697242196583, 2.8566926971055877`}, {
+           3.2268881728246694`, 3.414772756297722}}]}, 
+         {Hue[0, 1, 0.8], 
+          LineBox[{{3.528697242196583, 2.8566926971055877`}, {
+           4.229462892871274, 3.200564503689706}}]}, 
+         LineBox[{{2.89848472235021, 2.6147182022083206`}, {
+          3.2268881728246694`, 3.414772756297722}}]}, 
+        {Hue[0.6, 0.2, 0.8], EdgeForm[{GrayLevel[0], Opacity[0.7]}], 
+         {Hue[0, 1, 0.8], DiskBox[1, 0.04492860367506624]}, 
+         {Hue[0.14, 1, 0.9], DiskBox[2, 0.04492860367506624]}, 
+         {Hue[0, 1, 0.8], DiskBox[3, 0.04492860367506624]}, 
+         {Hue[0, 1, 0.8], DiskBox[4, 0.04492860367506624]}, 
+         {Hue[0.14, 1, 0.9], DiskBox[5, 0.04492860367506624]}, 
+         {Hue[0.14, 1, 0.9], DiskBox[6, 0.04492860367506624]}, 
+         {Hue[0, 1, 0.8], DiskBox[7, 0.04492860367506624]}, 
+         {Hue[0, 1, 0.8], DiskBox[8, 0.04492860367506624]}, 
+         {Hue[0, 1, 0.8], DiskBox[9, 0.04492860367506624]}, 
+         {Hue[0.14, 1, 0.9], DiskBox[10, 0.04492860367506624]}, 
+         {Hue[0, 1, 0.8], DiskBox[11, 0.04492860367506624]}, 
+         {Hue[0, 1, 0.8], DiskBox[12, 0.04492860367506624]}, 
+         {Hue[0.14, 1, 0.9], DiskBox[13, 0.04492860367506624]}, 
+         {Hue[0.14, 1, 0.9], DiskBox[14, 0.04492860367506624]}, 
+         {Hue[0.14, 1, 0.9], DiskBox[15, 0.04492860367506624]}, 
+         {Hue[0.14, 1, 0.9], DiskBox[16, 0.04492860367506624]}, 
+         {Hue[0.14, 1, 0.9], DiskBox[17, 0.04492860367506624]}, 
+         {Hue[0.14, 1, 0.9], DiskBox[18, 0.04492860367506624]}, 
+         {Hue[0, 1, 0.8], DiskBox[19, 0.04492860367506624]}, 
+         {Hue[0, 1, 0.8], DiskBox[20, 0.04492860367506624]}, 
+         {Hue[0, 1, 0.8], DiskBox[21, 0.04492860367506624]}, 
+         {Hue[0, 1, 0.8], DiskBox[22, 0.04492860367506624]}, 
+         {Hue[0, 1, 0.8], DiskBox[23, 0.04492860367506624]}, 
+         {Hue[0, 1, 0.8], DiskBox[24, 0.04492860367506624]}, 
+         {Hue[0.14, 1, 0.9], DiskBox[25, 0.04492860367506624]}, 
+         {Hue[0.14, 1, 0.9], DiskBox[26, 0.04492860367506624]}, 
+         {Hue[0.14, 1, 0.9], DiskBox[27, 0.04492860367506624]}, 
+         {Hue[0.14, 1, 0.9], DiskBox[28, 0.04492860367506624]}, 
+         {Hue[0.14, 1, 0.9], DiskBox[29, 0.04492860367506624]}, 
+         {Hue[0.14, 1, 0.9], DiskBox[30, 0.04492860367506624]}, 
+         {Hue[0.14, 1, 0.9], DiskBox[31, 0.04492860367506624]}, 
+         {Hue[0, 1, 0.8], DiskBox[32, 0.04492860367506624]}, 
+         {Hue[0, 1, 0.8], DiskBox[33, 0.04492860367506624]}, 
+         {Hue[0.14, 1, 0.9], DiskBox[34, 0.04492860367506624]}, 
+         {Hue[0, 1, 0.8], DiskBox[35, 0.04492860367506624]}, 
+         {Hue[0.14, 1, 0.9], DiskBox[36, 0.04492860367506624]}, 
+         {Hue[0.14, 1, 0.9], DiskBox[37, 0.04492860367506624]}, 
+         {Hue[0, 1, 0.8], DiskBox[38, 0.04492860367506624]}, 
+         {Hue[0, 1, 0.8], DiskBox[39, 0.04492860367506624]}, 
+         {Hue[0, 1, 0.8], DiskBox[40, 0.04492860367506624]}}}]],
+     MouseAppearanceTag["NetworkGraphics"]],
+    AllowKernelInitialization->False]],
+  DefaultBaseStyle->{
+   "NetworkGraphics", FrontEnd`GraphicsHighlightColor -> Hue[0.8, 1., 0.6]},
+  FormatType->TraditionalForm,
+  FrameTicks->None]], "Output",
+ CellChangeTimes->{3.872880367460333*^9},
+ CellLabel->"Out[9]=",ExpressionUUID->"41e5a1f3-ccd5-4932-b694-9154e0ee1cd5"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Dimensions", "[", 
+  RowBox[{"{", 
+   RowBox[{
+   "13", ",", "28", ",", "18", ",", "25", ",", "32", ",", "34", ",", "24", 
+    ",", "30", ",", "15", ",", "36", ",", "20", ",", "16", ",", "10", ",", 
+    "21", ",", "17", ",", "22", ",", "11", ",", "35", ",", "39", ",", "7"}], 
+   "}"}], "]"}]], "Input",
+ CellChangeTimes->{{3.872880406200212*^9, 3.87288040960211*^9}},
+ CellLabel->"In[10]:=",ExpressionUUID->"30dfb527-160c-4bb9-b2d9-6c34c3fdb954"],
+
+Cell[BoxData[
+ RowBox[{"{", "20", "}"}]], "Output",
+ CellChangeTimes->{3.872880410356824*^9},
+ CellLabel->"Out[10]=",ExpressionUUID->"81a7b4e4-33c7-42b1-8065-56def11dd2e0"]
+}, Open  ]],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"ed4", "=", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"25", ",", "32"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"25", ",", "38"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"25", ",", "16"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"25", ",", "30"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"32", ",", "33"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"32", ",", "35"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"32", ",", "23"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"7", ",", "26"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"7", ",", "5"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"7", ",", "2"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"7", ",", "8"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"26", ",", "20"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"26", ",", "35"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"26", ",", "17"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"15", ",", "39"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"15", ",", "36"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"15", ",", "31"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"15", ",", "37"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"39", ",", "30"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"39", ",", "17"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"39", ",", "6"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"20", ",", "38"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"20", ",", "24"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"20", ",", "17"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"38", ",", "21"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"38", ",", "14"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"5", ",", "19"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"5", ",", "9"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"5", ",", "18"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"19", ",", "3"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"19", ",", "16"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"19", ",", "28"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"23", ",", "34"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"23", ",", "0"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"23", ",", "22"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"34", ",", "4"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"34", ",", "30"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"34", ",", "36"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"0", ",", "14"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"0", ",", "29"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"0", ",", "8"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"14", ",", "21"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"14", ",", "18"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"2", ",", "11"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"2", ",", "8"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"2", ",", "28"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"11", ",", "37"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"11", ",", "27"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"11", ",", "10"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"30", ",", "33"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"1", ",", "33"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"1", ",", "17"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"1", ",", "13"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"1", ",", "27"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"33", ",", "31"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"12", ",", "36"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"12", ",", "9"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"12", ",", "35"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"12", ",", "10"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"36", ",", "16"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"13", ",", "28"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"13", ",", "37"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"13", ",", "27"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"28", ",", "31"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"18", ",", "21"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"18", ",", "3"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"21", ",", "22"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"37", ",", "24"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"24", ",", "10"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"24", ",", "22"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"31", ",", "29"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"9", ",", "16"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"9", ",", "6"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"4", ",", "8"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"4", ",", "35"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"4", ",", "3"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"27", ",", "29"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"29", ",", "6"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"3", ",", "10"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"22", ",", "6"}], "}"}]}], "}"}]}], ";"}]], "Input",
+ CellChangeTimes->{{3.872880504980874*^9, 3.8728805139045067`*^9}},
+ CellLabel->"In[11]:=",ExpressionUUID->"7aecd3e9-70ff-496b-a904-355f085aff3c"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"g", " ", "=", 
+   RowBox[{"Graph", "[", 
+    RowBox[{"Table", "[", 
+     RowBox[{
+      RowBox[{"UndirectedEdge", "[", 
+       RowBox[{
+        RowBox[{"ed4", "[", 
+         RowBox[{"[", 
+          RowBox[{"i", ",", "1"}], "]"}], "]"}], ",", 
+        RowBox[{"ed4", "[", 
+         RowBox[{"[", 
+          RowBox[{"i", ",", "2"}], "]"}], "]"}]}], "]"}], ",", 
+      RowBox[{"{", 
+       RowBox[{"i", ",", "1", ",", 
+        RowBox[{
+         RowBox[{"Dimensions", "[", "ed4", "]"}], "[", 
+         RowBox[{"[", "1", "]"}], "]"}]}], "}"}]}], "]"}], "]"}]}], 
+  ";"}]], "Input",
+ CellChangeTimes->{{3.872880557455077*^9, 3.872880565059328*^9}},
+ CellLabel->"In[15]:=",ExpressionUUID->"e90f8d81-abe5-42e8-a8ef-e64f430495f1"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"FindGraphPartition", "[", "g", "]"}]], "Input",
+ CellChangeTimes->{{3.872880325614039*^9, 3.872880335088785*^9}},
+ CellLabel->"In[16]:=",ExpressionUUID->"c846d0f6-fa23-4e32-aaf1-60f1793cbc07"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{
+    "30", ",", "33", ",", "26", ",", "2", ",", "20", ",", "17", ",", "15", 
+     ",", "39", ",", "31", ",", "37", ",", "6", ",", "24", ",", "28", ",", 
+     "22", ",", "29", ",", "11", ",", "27", ",", "10", ",", "1", ",", "13"}], 
+    "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+    "25", ",", "32", ",", "38", ",", "16", ",", "35", ",", "23", ",", "7", 
+     ",", "5", ",", "8", ",", "36", ",", "21", ",", "14", ",", "19", ",", "9",
+      ",", "18", ",", "3", ",", "34", ",", "0", ",", "4", ",", "12"}], 
+    "}"}]}], "}"}]], "Output",
+ CellChangeTimes->{{3.872880542710862*^9, 3.872880571034647*^9}},
+ CellLabel->"Out[16]=",ExpressionUUID->"b0a20cc9-a24a-4828-8f44-4b77e6e76ada"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"\n", 
+  RowBox[{"HighlightGraph", "[", 
+   RowBox[{"g", ",", 
+    RowBox[{"Map", "[", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"Subgraph", "[", 
+        RowBox[{"g", ",", "#"}], "]"}], "&"}], ",", "%"}], "]"}]}], 
+   "]"}]}]], "Input",
+ CellChangeTimes->{{3.872880361027639*^9, 3.872880364884124*^9}},
+ CellLabel->"In[17]:=",ExpressionUUID->"54c01054-6fd7-4a50-9fe5-150404e6973b"],
+
+Cell[BoxData[
+ GraphicsBox[
+  NamespaceBox["NetworkGraphics",
+   DynamicModuleBox[{Typeset`graph = HoldComplete[
+     Graph[{25, 32, 38, 16, 30, 33, 35, 23, 7, 26, 5, 2, 8, 20, 17, 15, 39, 
+      36, 31, 37, 6, 24, 21, 14, 19, 9, 18, 3, 28, 34, 0, 22, 4, 29, 11, 27, 
+      10, 1, 13, 12}, {
+      Null, {{1, 2}, {1, 3}, {1, 4}, {1, 5}, {2, 6}, {2, 7}, {2, 8}, {9, 
+       10}, {9, 11}, {9, 12}, {9, 13}, {10, 14}, {10, 7}, {10, 15}, {16, 
+       17}, {16, 18}, {16, 19}, {16, 20}, {17, 5}, {17, 15}, {17, 21}, {14, 
+       3}, {14, 22}, {14, 15}, {3, 23}, {3, 24}, {11, 25}, {11, 26}, {11, 
+       27}, {25, 28}, {25, 4}, {25, 29}, {8, 30}, {8, 31}, {8, 32}, {30, 
+       33}, {30, 5}, {30, 18}, {31, 24}, {31, 34}, {31, 13}, {24, 23}, {24, 
+       27}, {12, 35}, {12, 13}, {12, 29}, {35, 20}, {35, 36}, {35, 37}, {5, 
+       6}, {38, 6}, {38, 15}, {38, 39}, {38, 36}, {6, 19}, {40, 18}, {40, 
+       26}, {40, 7}, {40, 37}, {18, 4}, {39, 29}, {39, 20}, {39, 36}, {29, 
+       19}, {27, 23}, {27, 28}, {23, 32}, {20, 22}, {22, 37}, {22, 32}, {19, 
+       34}, {26, 4}, {26, 21}, {33, 13}, {33, 7}, {33, 28}, {36, 34}, {34, 
+       21}, {28, 37}, {32, 21}}}, {GraphHighlight -> {3, 
+         UndirectedEdge[25, 32], 32, 
+         UndirectedEdge[26, 20], 
+         UndirectedEdge[25, 38], 
+         UndirectedEdge[39, 30], 
+         UndirectedEdge[34, 36], 21, 35, 10, 15, 
+         UndirectedEdge[15, 39], 
+         UndirectedEdge[14, 18], 
+         UndirectedEdge[20, 24], 
+         UndirectedEdge[38, 14], 
+         UndirectedEdge[12, 36], 
+         UndirectedEdge[15, 37], 
+         UndirectedEdge[13, 27], 
+         UndirectedEdge[15, 31], 
+         UndirectedEdge[1, 13], 
+         UndirectedEdge[36, 16], 
+         UndirectedEdge[13, 28], 
+         UndirectedEdge[32, 35], 20, 
+         UndirectedEdge[23, 0], 17, 
+         UndirectedEdge[7, 5], 2, 0, 
+         UndirectedEdge[37, 24], 
+         UndirectedEdge[5, 18], 12, 
+         UndirectedEdge[39, 6], 
+         UndirectedEdge[18, 3], 
+         UndirectedEdge[24, 10], 4, 
+         UndirectedEdge[4, 3], 
+         UndirectedEdge[11, 37], 
+         UndirectedEdge[0, 14], 
+         UndirectedEdge[2, 11], 29, 18, 
+         UndirectedEdge[30, 33], 
+         UndirectedEdge[9, 16], 
+         UndirectedEdge[1, 27], 33, 
+         UndirectedEdge[25, 16], 
+         UndirectedEdge[13, 37], 13, 27, 22, 26, 
+         UndirectedEdge[12, 35], 
+         UndirectedEdge[11, 27], 8, 
+         UndirectedEdge[39, 17], 31, 
+         UndirectedEdge[29, 6], 
+         UndirectedEdge[22, 6], 
+         UndirectedEdge[24, 22], 
+         UndirectedEdge[4, 35], 
+         UndirectedEdge[19, 3], 6, 
+         UndirectedEdge[7, 8], 
+         UndirectedEdge[32, 23], 
+         UndirectedEdge[2, 28], 14, 7, 38, 30, 5, 
+         UndirectedEdge[0, 8], 
+         UndirectedEdge[12, 9], 
+         UndirectedEdge[20, 17], 37, 11, 25, 
+         UndirectedEdge[1, 17], 1, 
+         UndirectedEdge[19, 16], 
+         UndirectedEdge[31, 29], 
+         UndirectedEdge[5, 9], 28, 
+         UndirectedEdge[28, 31], 
+         UndirectedEdge[33, 31], 23, 
+         UndirectedEdge[14, 21], 39, 
+         UndirectedEdge[4, 8], 
+         UndirectedEdge[34, 4], 
+         UndirectedEdge[27, 29], 34, 
+         UndirectedEdge[1, 33], 
+         UndirectedEdge[23, 34], 24, 
+         UndirectedEdge[26, 17], 
+         UndirectedEdge[38, 21], 
+         UndirectedEdge[5, 19], 
+         UndirectedEdge[18, 21], 9, 36, 
+         UndirectedEdge[11, 10], 19, 16}, 
+       GraphHighlightStyle -> {
+        UndirectedEdge[32, 35] -> {EdgeStyle -> Hue[0.14, 1, 0.9]}, 
+         UndirectedEdge[26, 20] -> {EdgeStyle -> Hue[0, 1, 0.8]}, 
+         15 -> {VertexStyle -> Hue[0, 1, 0.8]}, 
+         39 -> {VertexStyle -> Hue[0, 1, 0.8]}, 
+         UndirectedEdge[12, 9] -> {EdgeStyle -> Hue[0.14, 1, 0.9]}, 
+         UndirectedEdge[25, 16] -> {EdgeStyle -> Hue[0.14, 1, 0.9]}, 
+         UndirectedEdge[5, 9] -> {EdgeStyle -> Hue[0.14, 1, 0.9]}, 
+         UndirectedEdge[39, 30] -> {EdgeStyle -> Hue[0, 1, 0.8]}, 
+         2 -> {VertexStyle -> Hue[0, 1, 0.8]}, 
+         UndirectedEdge[34, 4] -> {EdgeStyle -> Hue[0.14, 1, 0.9]}, 
+         UndirectedEdge[5, 18] -> {EdgeStyle -> Hue[0.14, 1, 0.9]}, 
+         8 -> {VertexStyle -> Hue[0.14, 1, 0.9]}, 
+         UndirectedEdge[15, 31] -> {EdgeStyle -> Hue[0, 1, 0.8]}, 
+         UndirectedEdge[20, 24] -> {EdgeStyle -> Hue[0, 1, 0.8]}, 
+         UndirectedEdge[0, 14] -> {EdgeStyle -> Hue[0.14, 1, 0.9]}, 
+         UndirectedEdge[20, 17] -> {EdgeStyle -> Hue[0, 1, 0.8]}, 
+         UndirectedEdge[12, 36] -> {EdgeStyle -> Hue[0.14, 1, 0.9]}, 
+         23 -> {VertexStyle -> Hue[0.14, 1, 0.9]}, 
+         35 -> {VertexStyle -> Hue[0.14, 1, 0.9]}, 
+         19 -> {VertexStyle -> Hue[0.14, 1, 0.9]}, 
+         UndirectedEdge[13, 28] -> {EdgeStyle -> Hue[0, 1, 0.8]}, 
+         17 -> {VertexStyle -> Hue[0, 1, 0.8]}, 
+         UndirectedEdge[13, 27] -> {EdgeStyle -> Hue[0, 1, 0.8]}, 
+         UndirectedEdge[15, 39] -> {EdgeStyle -> Hue[0, 1, 0.8]}, 
+         UndirectedEdge[1, 33] -> {EdgeStyle -> Hue[0, 1, 0.8]}, 
+         11 -> {VertexStyle -> Hue[0, 1, 0.8]}, 
+         UndirectedEdge[4, 3] -> {EdgeStyle -> Hue[0.14, 1, 0.9]}, 
+         UndirectedEdge[14, 21] -> {EdgeStyle -> Hue[0.14, 1, 0.9]}, 
+         16 -> {VertexStyle -> Hue[0.14, 1, 0.9]}, 
+         UndirectedEdge[23, 0] -> {EdgeStyle -> Hue[0.14, 1, 0.9]}, 
+         UndirectedEdge[38, 21] -> {EdgeStyle -> Hue[0.14, 1, 0.9]}, 
+         UndirectedEdge[38, 14] -> {EdgeStyle -> Hue[0.14, 1, 0.9]}, 
+         UndirectedEdge[4, 35] -> {EdgeStyle -> Hue[0.14, 1, 0.9]}, 
+         UndirectedEdge[22, 6] -> {EdgeStyle -> Hue[0, 1, 0.8]}, 
+         UndirectedEdge[37, 24] -> {EdgeStyle -> Hue[0, 1, 0.8]}, 
+         32 -> {VertexStyle -> Hue[0.14, 1, 0.9]}, 
+         UndirectedEdge[7, 5] -> {EdgeStyle -> Hue[0.14, 1, 0.9]}, 
+         UndirectedEdge[28, 31] -> {EdgeStyle -> Hue[0, 1, 0.8]}, 
+         29 -> {VertexStyle -> Hue[0, 1, 0.8]}, 
+         7 -> {VertexStyle -> Hue[0.14, 1, 0.9]}, 
+         20 -> {VertexStyle -> Hue[0, 1, 0.8]}, 
+         26 -> {VertexStyle -> Hue[0, 1, 0.8]}, 
+         UndirectedEdge[24, 10] -> {EdgeStyle -> Hue[0, 1, 0.8]}, 
+         38 -> {VertexStyle -> Hue[0.14, 1, 0.9]}, 
+         UndirectedEdge[15, 37] -> {EdgeStyle -> Hue[0, 1, 0.8]}, 
+         UndirectedEdge[0, 8] -> {EdgeStyle -> Hue[0.14, 1, 0.9]}, 
+         9 -> {VertexStyle -> Hue[0.14, 1, 0.9]}, 
+         UndirectedEdge[13, 37] -> {EdgeStyle -> Hue[0, 1, 0.8]}, 
+         31 -> {VertexStyle -> Hue[0, 1, 0.8]}, 
+         UndirectedEdge[5, 19] -> {EdgeStyle -> Hue[0.14, 1, 0.9]}, 
+         33 -> {VertexStyle -> Hue[0, 1, 0.8]}, 
+         UndirectedEdge[25, 38] -> {EdgeStyle -> Hue[0.14, 1, 0.9]}, 
+         UndirectedEdge[4, 8] -> {EdgeStyle -> Hue[0.14, 1, 0.9]}, 
+         UndirectedEdge[23, 34] -> {EdgeStyle -> Hue[0.14, 1, 0.9]}, 
+         UndirectedEdge[18, 3] -> {EdgeStyle -> Hue[0.14, 1, 0.9]}, 
+         UndirectedEdge[1, 13] -> {EdgeStyle -> Hue[0, 1, 0.8]}, 
+         UndirectedEdge[11, 37] -> {EdgeStyle -> Hue[0, 1, 0.8]}, 
+         18 -> {VertexStyle -> Hue[0.14, 1, 0.9]}, 
+         UndirectedEdge[1, 27] -> {EdgeStyle -> Hue[0, 1, 0.8]}, 
+         UndirectedEdge[11, 10] -> {EdgeStyle -> Hue[0, 1, 0.8]}, 
+         UndirectedEdge[26, 17] -> {EdgeStyle -> Hue[0, 1, 0.8]}, 
+         13 -> {VertexStyle -> Hue[0, 1, 0.8]}, 
+         34 -> {VertexStyle -> Hue[0.14, 1, 0.9]}, 
+         UndirectedEdge[30, 33] -> {EdgeStyle -> Hue[0, 1, 0.8]}, 
+         UndirectedEdge[11, 27] -> {EdgeStyle -> Hue[0, 1, 0.8]}, 
+         UndirectedEdge[39, 17] -> {EdgeStyle -> Hue[0, 1, 0.8]}, 
+         UndirectedEdge[9, 16] -> {EdgeStyle -> Hue[0.14, 1, 0.9]}, 
+         3 -> {VertexStyle -> Hue[0.14, 1, 0.9]}, 
+         12 -> {VertexStyle -> Hue[0.14, 1, 0.9]}, 
+         UndirectedEdge[32, 23] -> {EdgeStyle -> Hue[0.14, 1, 0.9]}, 
+         UndirectedEdge[39, 6] -> {EdgeStyle -> Hue[0, 1, 0.8]}, 
+         28 -> {VertexStyle -> Hue[0, 1, 0.8]}, 
+         UndirectedEdge[27, 29] -> {EdgeStyle -> Hue[0, 1, 0.8]}, 
+         36 -> {VertexStyle -> Hue[0.14, 1, 0.9]}, 
+         UndirectedEdge[19, 3] -> {EdgeStyle -> Hue[0.14, 1, 0.9]}, 
+         4 -> {VertexStyle -> Hue[0.14, 1, 0.9]}, 
+         0 -> {VertexStyle -> Hue[0.14, 1, 0.9]}, 
+         25 -> {VertexStyle -> Hue[0.14, 1, 0.9]}, 
+         UndirectedEdge[25, 32] -> {EdgeStyle -> Hue[0.14, 1, 0.9]}, 
+         UndirectedEdge[18, 21] -> {EdgeStyle -> Hue[0.14, 1, 0.9]}, 
+         1 -> {VertexStyle -> Hue[0, 1, 0.8]}, 
+         UndirectedEdge[29, 6] -> {EdgeStyle -> Hue[0, 1, 0.8]}, 
+         UndirectedEdge[2, 28] -> {EdgeStyle -> Hue[0, 1, 0.8]}, 
+         UndirectedEdge[34, 36] -> {EdgeStyle -> Hue[0.14, 1, 0.9]}, 
+         24 -> {VertexStyle -> Hue[0, 1, 0.8]}, 
+         UndirectedEdge[24, 22] -> {EdgeStyle -> Hue[0, 1, 0.8]}, 
+         21 -> {VertexStyle -> Hue[0.14, 1, 0.9]}, 
+         37 -> {VertexStyle -> Hue[0, 1, 0.8]}, 
+         10 -> {VertexStyle -> Hue[0, 1, 0.8]}, 
+         UndirectedEdge[7, 8] -> {EdgeStyle -> Hue[0.14, 1, 0.9]}, 
+         UndirectedEdge[19, 16] -> {EdgeStyle -> Hue[0.14, 1, 0.9]}, 
+         22 -> {VertexStyle -> Hue[0, 1, 0.8]}, 
+         UndirectedEdge[2, 11] -> {EdgeStyle -> Hue[0, 1, 0.8]}, 
+         30 -> {VertexStyle -> Hue[0, 1, 0.8]}, 
+         UndirectedEdge[14, 18] -> {EdgeStyle -> Hue[0.14, 1, 0.9]}, 
+         27 -> {VertexStyle -> Hue[0, 1, 0.8]}, 
+         UndirectedEdge[33, 31] -> {EdgeStyle -> Hue[0, 1, 0.8]}, 
+         UndirectedEdge[1, 17] -> {EdgeStyle -> Hue[0, 1, 0.8]}, 
+         UndirectedEdge[12, 35] -> {EdgeStyle -> Hue[0.14, 1, 0.9]}, 
+         UndirectedEdge[36, 16] -> {EdgeStyle -> Hue[0.14, 1, 0.9]}, 
+         UndirectedEdge[31, 29] -> {EdgeStyle -> Hue[0, 1, 0.8]}, 
+         5 -> {VertexStyle -> Hue[0.14, 1, 0.9]}, 
+         14 -> {VertexStyle -> Hue[0.14, 1, 0.9]}, 
+         6 -> {VertexStyle -> Hue[0, 1, 0.8]}}}]]}, 
+    TagBox[GraphicsGroupBox[GraphicsComplexBox[CompressedData["
+1:eJwBkQJu/SFib1JlAgAAACgAAAACAAAAIIjh8nrb9D8GqJHo6HUJQM9DMbZg
+BP8/YqOc0m3PCUCAWhYHJAXiPyo0ZsgIXANAWpWeT4Q8+D9wfat+K7f/P/+d
+OSr8YQJAAtDHj6rWC0CWffiwzqsJQISfOkZr7gdABDEoQDqg+T++b3iadFMC
+QI6MvyJopvE/hZ802i2VBUB478VZ++/8P9DDBF2dt7I/BKCPT9DhAEDalY0E
+g0X1P4JHnUh5se4/TK39MW7g0j/imsNXpZkEQAAAAAAAAAAA3PIiCQGO+D8o
+H6065wjfP9ywwiFdnf0/gDZeB8jAAEDb2Zx/sz0HQGZAoVPmTAFAjOTEskQx
+C0CejeYU3lYDQDpn6CMowAZAmapbDK09B0AkvBrSHH0CQIjwn5RHFwRAFtZq
+ZwgoDED+UP7aN9j+P18jOLF1XwxA9dmmQC9s9T9qb4c0x2oBQKDTB23jWgBA
+gArezRQOA0AIZKIqxsn3PwAAAAAAAAAA+jDtdlmg/T/wQMzwPvvGP9wbnR6m
+N/k/CcmORVE3/T+EiUADgH7nPyQHpOPHLvc/gCKW36nf8j/wTBDKU+HAP88s
+kx0XIes/Nl8EuzIV8T+0Kvov7O/kP/h2LXVllQlAWaH7HH8L6T96fX941dv4
+P4YbFUuTtQZANio2pj9b9T+1tLueDGD4P3SED8Mh4PE/tYQiPcJLAEDHfRvr
+stTwP4OG8wJg/vg/F6lF53qvBkAuzom2zWn4P+p2oYOlzQpATA7z3m712D+W
+eCAzOCYPQDt3Z6LU3vE/bEVnoaVXAkBKufllSALlP6SeNZdWtw9AmBRCfH+S
+AEAL+ROlmusQQBIl14QALfM/xla7kXNV/z8R1LgbHqP5P6O4I4s=
+       "], {
+        {Hue[0.6, 0.7, 0.5], Opacity[0.7], 
+         {Hue[0.14, 1, 0.9], 
+          LineBox[{{1.3035840499437725`, 3.1825731439066685`}, {
+           1.9385687939541076`, 3.226283688931674}}]}, 
+         {Hue[0.14, 1, 0.9], 
+          LineBox[{{1.3035840499437725`, 3.1825731439066685`}, {
+           0.5631275309013546, 2.419938626879703}}]}, 
+         {Hue[0.14, 1, 0.9], 
+          LineBox[{{1.3035840499437725`, 3.1825731439066685`}, {
+           1.5147746191153915`, 1.9822192142526909`}}]}, 
+         LineBox[{{1.3035840499437725`, 3.1825731439066685`}, {
+          2.2978442477067342`, 3.4798175080159135`}}], 
+         LineBox[{{1.9385687939541076`, 3.226283688931674}, {
+          3.208890326102572, 2.9914155470505097`}}], 
+         {Hue[0.14, 1, 0.9], 
+          LineBox[{{1.9385687939541076`, 3.226283688931674}, {
+           1.6016180521137935`, 2.2907497470859814`}}]}, 
+         {Hue[0.14, 1, 0.9], 
+          LineBox[{{1.9385687939541076`, 3.226283688931674}, {
+           1.1031266553261818`, 2.697841362696581}}]}, 
+         LineBox[{{0.5631275309013546, 2.419938626879703}, {
+          1.8509188956041305`, 2.0941315246225827`}}], 
+         {Hue[0.14, 1, 0.9], 
+          LineBox[{{0.5631275309013546, 2.419938626879703}, {0., 
+           1.8516478200500033`}}]}, 
+         {Hue[0.14, 1, 0.9], 
+          LineBox[{{0.5631275309013546, 2.419938626879703}, {
+           0.17954241521557135`, 1.5760861583564667`}}]}, 
+         {Hue[0.14, 1, 0.9], 
+          LineBox[{{1.5147746191153915`, 1.9822192142526909`}, {
+           2.311090127411733, 2.5113669978437123`}}]}, 
+         {Hue[0.14, 1, 0.9], 
+          LineBox[{{1.5147746191153915`, 1.9822192142526909`}, {
+           1.826005241117459, 0.7341919005887552}}]}, 
+         {Hue[0.14, 1, 0.9], 
+          LineBox[{{1.5147746191153915`, 1.9822192142526909`}, {
+           1.4489210979667826`, 1.1796053632589576`}}]}, 
+         {Hue[0, 1, 0.8], 
+          LineBox[{{2.2978442477067342`, 3.4798175080159135`}, {
+           3.208890326102572, 2.9914155470505097`}}]}, 
+         {Hue[0, 1, 0.8], 
+          LineBox[{{2.2978442477067342`, 3.4798175080159135`}, {
+           2.8438265614794576`, 2.905115219638287}}]}, 
+         LineBox[{{2.2978442477067342`, 3.4798175080159135`}, {
+          1.553670378394456, 2.8386598459068777`}}], 
+         {Hue[0, 1, 0.8], 
+          LineBox[{{3.208890326102572, 2.9914155470505097`}, {
+           3.5195472793082088`, 1.9277876429014777`}}]}, 
+         {Hue[0, 1, 0.8], 
+          LineBox[{{3.208890326102572, 2.9914155470505097`}, {
+           3.9645206273306304`, 2.0715322215715553`}}]}, 
+         LineBox[{{1.6016180521137935`, 2.2907497470859814`}, {
+          2.1102606025415316`, 1.3294706514219485`}}], 
+         {Hue[0.14, 1, 0.9], 
+          LineBox[{{1.6016180521137935`, 2.2907497470859814`}, {
+           1.0519284423715918`, 1.562103282478717}}]}, 
+         {Hue[0.14, 1, 0.9], 
+          LineBox[{{1.6016180521137935`, 2.2907497470859814`}, {
+           1.9583621685646206`, 1.6023236353769372`}}]}, 
+         {Hue[0.14, 1, 0.9], 
+          LineBox[{{1.1031266553261818`, 2.697841362696581}, {
+           1.553670378394456, 2.8386598459068777`}}]}, 
+         {Hue[0.14, 1, 0.9], 
+          LineBox[{{1.1031266553261818`, 2.697841362696581}, {
+           1.334777497543326, 1.5234495354191442`}}]}, 
+         LineBox[{{1.1031266553261818`, 2.697841362696581}, {
+          1.1172196979098574`, 2.0369915748747993`}}], 
+         LineBox[{{1.808589316059594, 0.07311423798525074}, {
+          2.1102606025415316`, 1.3294706514219485`}}], 
+         {Hue[0.14, 1, 0.9], 
+          LineBox[{{1.808589316059594, 0.07311423798525074}, {
+           0.959164277863451, 0.29494814760137866`}}]}, 
+         LineBox[{{1.808589316059594, 0.07311423798525074}, {
+          2.575022397667781, 0.}}], 
+         {Hue[0.14, 1, 0.9], 
+          LineBox[{{1.808589316059594, 0.07311423798525074}, {
+           1.5346689564604992`, 0.4849184105882949}}]}, 
+         {Hue[0, 1, 0.8], 
+          LineBox[{{2.1102606025415316`, 1.3294706514219485`}, {
+           1.8509188956041305`, 2.0941315246225827`}}]}, 
+         {Hue[0, 1, 0.8], 
+          LineBox[{{2.1102606025415316`, 1.3294706514219485`}, {
+           2.905127522443974, 2.1625486882767744`}}]}, 
+         {Hue[0.14, 1, 0.9], 
+          LineBox[{{0.959164277863451, 0.29494814760137866`}, {
+           1.826005241117459, 0.7341919005887552}}]}, 
+         {Hue[0.14, 1, 0.9], 
+          LineBox[{{0.959164277863451, 0.29494814760137866`}, {
+           1.4489210979667826`, 1.1796053632589576`}}]}, 
+         {Hue[0.14, 1, 0.9], 
+          LineBox[{{0.959164277863451, 0.29494814760137866`}, {
+           0.13187644354238826`, 0.8477893426546873}}]}, 
+         LineBox[{{2.575022397667781, 0.}, {1.5346689564604992`, 
+          0.4849184105882949}}], 
+         {Hue[0, 1, 0.8], 
+          LineBox[{{2.575022397667781, 0.}, {3.1979474215030415`, 
+           0.7826533857415071}}]}, 
+         {Hue[0, 1, 0.8], 
+          LineBox[{{2.575022397667781, 0.}, {3.350413349499708, 
+           0.38998004696279476`}}]}, 
+         {Hue[0.14, 1, 0.9], 
+          LineBox[{{1.5346689564604992`, 0.4849184105882949}, {
+           1.334777497543326, 1.5234495354191442`}}]}, 
+         {Hue[0.14, 1, 0.9], 
+          LineBox[{{1.5346689564604992`, 0.4849184105882949}, {
+           1.0519284423715918`, 1.562103282478717}}]}, 
+         {Hue[0, 1, 0.8], 
+          LineBox[{{1.8509188956041305`, 2.0941315246225827`}, {
+           2.905127522443974, 2.1625486882767744`}}]}, 
+         {Hue[0, 1, 0.8], 
+          LineBox[{{1.8509188956041305`, 2.0941315246225827`}, {
+           2.3818756183039227`, 1.4867612519649374`}}]}, 
+         {Hue[0, 1, 0.8], 
+          LineBox[{{2.905127522443974, 2.1625486882767744`}, {
+           2.8438265614794576`, 2.905115219638287}}]}, 
+         {Hue[0, 1, 0.8], 
+          LineBox[{{2.905127522443974, 2.1625486882767744`}, {
+           3.9645206273306304`, 2.0715322215715553`}}]}, 
+         {Hue[0, 1, 0.8], 
+          LineBox[{{3.399056812890711, 2.4174157746180773`}, {
+           2.8438265614794576`, 2.905115219638287}}]}, 
+         LineBox[{{3.399056812890711, 2.4174157746180773`}, {
+          2.311090127411733, 2.5113669978437123`}}], 
+         {Hue[0, 1, 0.8], 
+          LineBox[{{3.399056812890711, 2.4174157746180773`}, {
+           3.5195472793082088`, 1.9277876429014777`}}]}, 
+         {Hue[0, 1, 0.8], 
+          LineBox[{{3.399056812890711, 2.4174157746180773`}, {
+           3.5466111989266405`, 1.3389122510394575`}}]}, 
+         {Hue[0, 1, 0.8], 
+          LineBox[{{2.8438265614794576`, 2.905115219638287}, {
+           2.177137766249804, 2.0443790929807193`}}]}, 
+         {Hue[0.14, 1, 0.9], 
+          LineBox[{{2.311090127411733, 2.5113669978437123`}, {
+           1.553670378394456, 2.8386598459068777`}}]}, 
+         {Hue[0.14, 1, 0.9], 
+          LineBox[{{2.311090127411733, 2.5113669978437123`}, {
+           1.9583621685646206`, 1.6023236353769372`}}]}, 
+         {Hue[0, 1, 0.8], 
+          LineBox[{{3.5195472793082088`, 1.9277876429014777`}, {
+           3.1979474215030415`, 0.7826533857415071}}]}, 
+         {Hue[0, 1, 0.8], 
+          LineBox[{{3.5195472793082088`, 1.9277876429014777`}, {
+           2.8356836383947086`, 1.52583094886803}}]}, 
+         {Hue[0, 1, 0.8], 
+          LineBox[{{3.5466111989266405`, 1.3389122510394575`}, {
+           2.3818756183039227`, 1.4867612519649374`}}]}, 
+         {Hue[0, 1, 0.8], 
+          LineBox[{{3.5466111989266405`, 1.3389122510394575`}, {
+           3.350413349499708, 0.38998004696279476`}}]}, 
+         {Hue[0, 1, 0.8], 
+          LineBox[{{3.5466111989266405`, 1.3389122510394575`}, {
+           4.230082110733075, 1.1984868229940884`}}]}, 
+         LineBox[{{2.177137766249804, 2.0443790929807193`}, {
+          1.4489210979667826`, 1.1796053632589576`}}], 
+         {Hue[0, 1, 0.8], 
+          LineBox[{{2.177137766249804, 2.0443790929807193`}, {
+           1.1172196979098574`, 2.0369915748747993`}}]}, 
+         {Hue[0, 1, 0.8], 
+          LineBox[{{2.177137766249804, 2.0443790929807193`}, {
+           2.8356836383947086`, 1.52583094886803}}]}, 
+         {Hue[0, 1, 0.8], 
+          LineBox[{{2.3818756183039227`, 1.4867612519649374`}, {
+           1.1172196979098574`, 2.0369915748747993`}}]}, 
+         {Hue[0, 1, 0.8], 
+          LineBox[{{2.3818756183039227`, 1.4867612519649374`}, {
+           2.292796383823477, 0.6565286628445304}}]}, 
+         {Hue[0.14, 1, 0.9], 
+          LineBox[{{0., 1.8516478200500033`}, {0.17954241521557135`, 
+           1.5760861583564667`}}]}, 
+         {Hue[0.14, 1, 0.9], 
+          LineBox[{{0., 1.8516478200500033`}, {0.13187644354238826`, 
+           0.8477893426546873}}]}, 
+         LineBox[{{0., 1.8516478200500033`}, {1.1172196979098574`, 
+          2.0369915748747993`}}], 
+         {Hue[0.14, 1, 0.9], 
+          LineBox[{{0.17954241521557135`, 1.5760861583564667`}, {
+           0.13187644354238826`, 0.8477893426546873}}]}, 
+         {Hue[0.14, 1, 0.9], 
+          LineBox[{{0.17954241521557135`, 1.5760861583564667`}, {
+           1.334777497543326, 1.5234495354191442`}}]}, 
+         {Hue[0.14, 1, 0.9], 
+          LineBox[{{1.826005241117459, 0.7341919005887552}, {
+           1.067675333533726, 0.654287427621361}}]}, 
+         LineBox[{{1.826005241117459, 0.7341919005887552}, {
+          3.1979474215030415`, 0.7826533857415071}}], 
+         {Hue[0.14, 1, 0.9], 
+          LineBox[{{1.4489210979667826`, 1.1796053632589576`}, {
+           1.9583621685646206`, 1.6023236353769372`}}]}, 
+         {Hue[0.14, 1, 0.9], 
+          LineBox[{{0.13187644354238826`, 0.8477893426546873}, {
+           1.067675333533726, 0.654287427621361}}]}, 
+         {Hue[0.14, 1, 0.9], 
+          LineBox[{{1.067675333533726, 0.654287427621361}, {
+           1.0519284423715918`, 1.562103282478717}}]}, 
+         LineBox[{{1.067675333533726, 0.654287427621361}, {2.292796383823477, 
+          0.6565286628445304}}], 
+         {Hue[0, 1, 0.8], 
+          LineBox[{{3.1979474215030415`, 0.7826533857415071}, {
+           4.230082110733075, 1.1984868229940884`}}]}, 
+         {Hue[0.14, 1, 0.9], 
+          LineBox[{{1.553670378394456, 2.8386598459068777`}, {
+           1.0519284423715918`, 1.562103282478717}}]}, 
+         LineBox[{{1.334777497543326, 1.5234495354191442`}, {
+          2.8356836383947086`, 1.52583094886803}}], 
+         {Hue[0, 1, 0.8], 
+          LineBox[{{2.8356836383947086`, 1.52583094886803}, {
+           3.8936618799480796`, 1.1169020027077312`}}]}, 
+         {Hue[0, 1, 0.8], 
+          LineBox[{{3.350413349499708, 0.38998004696279476`}, {
+           3.8936618799480796`, 1.1169020027077312`}}]}, 
+         {Hue[0, 1, 0.8], 
+          LineBox[{{3.350413349499708, 0.38998004696279476`}, {
+           2.292796383823477, 0.6565286628445304}}]}, 
+         {Hue[0, 1, 0.8], 
+          LineBox[{{3.8936618799480796`, 1.1169020027077312`}, {
+           3.9645206273306304`, 2.0715322215715553`}}]}, 
+         {Hue[0, 1, 0.8], 
+          LineBox[{{3.8936618799480796`, 1.1169020027077312`}, {
+           4.230082110733075, 1.1984868229940884`}}]}, 
+         LineBox[{{2.292796383823477, 0.6565286628445304}, {
+          1.9583621685646206`, 1.6023236353769372`}}], 
+         {Hue[0, 1, 0.8], 
+          LineBox[{{3.9645206273306304`, 2.0715322215715553`}, {
+           4.230082110733075, 1.1984868229940884`}}]}}, 
+        {Hue[0.6, 0.2, 0.8], EdgeForm[{GrayLevel[0], Opacity[0.7]}], 
+         {Hue[0.14, 1, 0.9], DiskBox[1, 0.0384556139983996]}, 
+         {Hue[0.14, 1, 0.9], DiskBox[2, 0.0384556139983996]}, 
+         {Hue[0.14, 1, 0.9], DiskBox[3, 0.0384556139983996]}, 
+         {Hue[0.14, 1, 0.9], DiskBox[4, 0.0384556139983996]}, 
+         {Hue[0, 1, 0.8], DiskBox[5, 0.0384556139983996]}, 
+         {Hue[0, 1, 0.8], DiskBox[6, 0.0384556139983996]}, 
+         {Hue[0.14, 1, 0.9], DiskBox[7, 0.0384556139983996]}, 
+         {Hue[0.14, 1, 0.9], DiskBox[8, 0.0384556139983996]}, 
+         {Hue[0.14, 1, 0.9], DiskBox[9, 0.0384556139983996]}, 
+         {Hue[0, 1, 0.8], DiskBox[10, 0.0384556139983996]}, 
+         {Hue[0.14, 1, 0.9], DiskBox[11, 0.0384556139983996]}, 
+         {Hue[0, 1, 0.8], DiskBox[12, 0.0384556139983996]}, 
+         {Hue[0.14, 1, 0.9], DiskBox[13, 0.0384556139983996]}, 
+         {Hue[0, 1, 0.8], DiskBox[14, 0.0384556139983996]}, 
+         {Hue[0, 1, 0.8], DiskBox[15, 0.0384556139983996]}, 
+         {Hue[0, 1, 0.8], DiskBox[16, 0.0384556139983996]}, 
+         {Hue[0, 1, 0.8], DiskBox[17, 0.0384556139983996]}, 
+         {Hue[0.14, 1, 0.9], DiskBox[18, 0.0384556139983996]}, 
+         {Hue[0, 1, 0.8], DiskBox[19, 0.0384556139983996]}, 
+         {Hue[0, 1, 0.8], DiskBox[20, 0.0384556139983996]}, 
+         {Hue[0, 1, 0.8], DiskBox[21, 0.0384556139983996]}, 
+         {Hue[0, 1, 0.8], DiskBox[22, 0.0384556139983996]}, 
+         {Hue[0.14, 1, 0.9], DiskBox[23, 0.0384556139983996]}, 
+         {Hue[0.14, 1, 0.9], DiskBox[24, 0.0384556139983996]}, 
+         {Hue[0.14, 1, 0.9], DiskBox[25, 0.0384556139983996]}, 
+         {Hue[0.14, 1, 0.9], DiskBox[26, 0.0384556139983996]}, 
+         {Hue[0.14, 1, 0.9], DiskBox[27, 0.0384556139983996]}, 
+         {Hue[0.14, 1, 0.9], DiskBox[28, 0.0384556139983996]}, 
+         {Hue[0, 1, 0.8], DiskBox[29, 0.0384556139983996]}, 
+         {Hue[0.14, 1, 0.9], DiskBox[30, 0.0384556139983996]}, 
+         {Hue[0.14, 1, 0.9], DiskBox[31, 0.0384556139983996]}, 
+         {Hue[0, 1, 0.8], DiskBox[32, 0.0384556139983996]}, 
+         {Hue[0.14, 1, 0.9], DiskBox[33, 0.0384556139983996]}, 
+         {Hue[0, 1, 0.8], DiskBox[34, 0.0384556139983996]}, 
+         {Hue[0, 1, 0.8], DiskBox[35, 0.0384556139983996]}, 
+         {Hue[0, 1, 0.8], DiskBox[36, 0.0384556139983996]}, 
+         {Hue[0, 1, 0.8], DiskBox[37, 0.0384556139983996]}, 
+         {Hue[0, 1, 0.8], DiskBox[38, 0.0384556139983996]}, 
+         {Hue[0, 1, 0.8], DiskBox[39, 0.0384556139983996]}, 
+         {Hue[0.14, 1, 0.9], DiskBox[40, 0.0384556139983996]}}}]],
+     MouseAppearanceTag["NetworkGraphics"]],
+    AllowKernelInitialization->False]],
+  DefaultBaseStyle->{
+   "NetworkGraphics", FrontEnd`GraphicsHighlightColor -> Hue[0.8, 1., 0.6]},
+  FormatType->TraditionalForm,
+  FrameTicks->None]], "Output",
+ CellChangeTimes->{{3.872880549375464*^9, 3.872880574289104*^9}},
+ CellLabel->"Out[17]=",ExpressionUUID->"2626fa4d-6c15-4fd0-950c-806c8811b00e"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData["16"], "Input",
+ CellChangeTimes->{{3.8728806109559*^9, 3.872880615572455*^9}},
+ CellLabel->"In[18]:=",ExpressionUUID->"c6780248-1153-4c4d-94a0-5c8a72c7b92a"],
+
+Cell[BoxData["16"], "Output",
+ CellChangeTimes->{3.872880616273608*^9},
+ CellLabel->"Out[18]=",ExpressionUUID->"2ad5433d-3656-48ee-a173-fb19a5bddd15"]
+}, Open  ]],
+
+Cell["so exactly good for epsilon =0.1", "Text",
+ CellChangeTimes->{{3.872880630547624*^9, 
+  3.872880639204463*^9}},ExpressionUUID->"3c280c60-79b6-432b-8f97-\
+b00f16918aba"]
+},
+WindowSize->{808, 857},
+WindowMargins->{{4, Automatic}, {Automatic, 4}},
+FrontEndVersion->"12.0 for Mac OS X x86 (64-bit) (April 8, 2019)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 4121, 126, 178, "Input",ExpressionUUID->"d2c7f639-5e58-4ca7-89df-383037e50a2e"],
+Cell[4682, 148, 762, 21, 52, "Input",ExpressionUUID->"928d4468-9c75-417a-a889-0a8b36d36f14"],
+Cell[CellGroupData[{
+Cell[5469, 173, 211, 3, 30, "Input",ExpressionUUID->"963dba50-4942-4a02-a6e2-db37948e0859"],
+Cell[5683, 178, 775, 16, 56, "Output",ExpressionUUID->"eabf6bac-b857-4f5e-b7fb-ff087c45927e"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[6495, 199, 215, 3, 30, "Input",ExpressionUUID->"113aa7b5-3a83-42b5-9405-173d4df5561f"],
+Cell[6713, 204, 725, 16, 56, "Output",ExpressionUUID->"775ceeed-704a-4017-8f23-c0315f3828c0"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[7475, 225, 407, 11, 52, "Input",ExpressionUUID->"ec45dd22-ac55-4938-b9e1-e117fb336993"],
+Cell[7885, 238, 20954, 399, 299, "Output",ExpressionUUID->"41e5a1f3-ccd5-4932-b694-9154e0ee1cd5"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[28876, 642, 471, 9, 30, "Input",ExpressionUUID->"30dfb527-160c-4bb9-b2d9-6c34c3fdb954"],
+Cell[29350, 653, 172, 3, 34, "Output",ExpressionUUID->"81a7b4e4-33c7-42b1-8065-56def11dd2e0"]
+}, Open  ]],
+Cell[29537, 659, 5405, 166, 220, "Input",ExpressionUUID->"7aecd3e9-70ff-496b-a904-355f085aff3c"],
+Cell[34945, 827, 755, 21, 30, "Input",ExpressionUUID->"e90f8d81-abe5-42e8-a8ef-e64f430495f1"],
+Cell[CellGroupData[{
+Cell[35725, 852, 216, 3, 30, "Input",ExpressionUUID->"c846d0f6-fa23-4e32-aaf1-60f1793cbc07"],
+Cell[35944, 857, 750, 16, 56, "Output",ExpressionUUID->"b0a20cc9-a24a-4828-8f44-4b77e6e76ada"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[36731, 878, 408, 11, 52, "Input",ExpressionUUID->"54c01054-6fd7-4a50-9fe5-150404e6973b"],
+Cell[37142, 891, 25153, 478, 316, "Output",ExpressionUUID->"2626fa4d-6c15-4fd0-950c-806c8811b00e"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[62332, 1374, 171, 2, 30, "Input",ExpressionUUID->"c6780248-1153-4c4d-94a0-5c8a72c7b92a"],
+Cell[62506, 1378, 150, 2, 34, "Output",ExpressionUUID->"2ad5433d-3656-48ee-a173-fb19a5bddd15"]
+}, Open  ]],
+Cell[62671, 1383, 174, 3, 35, "Text",ExpressionUUID->"3c280c60-79b6-432b-8f97-b00f16918aba"]
+}
+]
+*)
+
